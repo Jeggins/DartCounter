@@ -146,31 +146,33 @@ namespace DartCounter
         {
             int posX = (e.X - (pictureBox_Dart.Width / 2));
             int posY = ((pictureBox_Dart.Height / 2) - e.Y);
-
-            int Score = GetScore(posX, posY);
+            
+            int angle = getAngle(posX, posY);
+            int zone = GetZone(angle);
+            int Score = GetScore(angle, posX, posY);
             if (GetRing(posX, posY) == enumRingType.DoubleBull)
             {
-                g.HandleThrow(Score, true, 5);
+                g.HandleThrow(Score, 25, true, 5);
             }
             else if (GetRing(posX, posY) == enumRingType.SingleBull)
             {
-                g.HandleThrow(Score, false, 4);
+                g.HandleThrow(Score, 25, false, 4);
             }
             else if (GetRing(posX, posY) == enumRingType.Triple)
             {
-                g.HandleThrow(Score, false, 3);
+                g.HandleThrow(Score, zone, false, 3);
             }
             else if (GetRing(posX, posY) == enumRingType.Double)
             {
-                g.HandleThrow(Score, true, 2);
+                g.HandleThrow(Score, zone, true, 2);
             }
             else if (GetRing(posX, posY) == enumRingType.Single)
             {
-                g.HandleThrow(Score, false, 1);
+                g.HandleThrow(Score, zone, false, 1);
             }
             else
             {
-                g.HandleThrow(Score, false, 0);
+                g.HandleThrow(Score, 0, false, 0);
             }
             bool win = g.players[g.ActivePlayer].Win();
             if (win)
@@ -542,15 +544,13 @@ namespace DartCounter
         }
 
         /// <summary>
-        /// Berechnet die geworfene Punktzahl des aktuellen Wurfes anhand der getroffenen Zahl und dem getroffenen Feld.
+        /// Berechnet den Winkel der geklickten Mausposition in Abhängigkeit zum Mittelpunkt der Dartscheibe
         /// </summary>
-        /// <param name="posX">X-Position der Maus</param>
-        /// <param name="posY">Y-Position der Maus</param>
+        /// <param name="posX"></param>
+        /// <param name="posY"></param>
         /// <returns></returns>
-        private int GetScore(int posX, int posY)
+        private int getAngle(int posX, int posY)
         {
-            int score = 0;
-
             double winkelInRad = Math.Atan2(posY, posX);
             double winkelInGrad = winkelInRad * 180 / Math.PI;
             int winkel = (int)winkelInGrad;
@@ -558,7 +558,21 @@ namespace DartCounter
             {
                 winkel = 180 + (winkel + 180);
             }
-            int points = GetPoints(winkel);
+            return winkel;
+        }
+
+        /// <summary>
+        /// Berechnet die geworfene Punktzahl des aktuellen Wurfes anhand der getroffenen Zahl und dem getroffenen Feld.
+        /// </summary>
+        /// <param name="posX">X-Position der Maus</param>
+        /// <param name="posY">Y-Position der Maus</param>
+        /// <returns></returns>
+        private int GetScore(int angle, int posX, int posY)
+        {
+            int score = 0;
+
+
+            int points = GetZone(angle);
             enumRingType Ring = GetRing(posX, posY);
 
             switch (Ring)
@@ -590,7 +604,7 @@ namespace DartCounter
         /// </summary>
         /// <param name="winkel">Winkel der Mausposition ausgehen vom Mittelpunkt der Dartscheibe</param>
         /// <returns></returns>
-        private int GetPoints(int winkel)
+        private int GetZone(int winkel)
         {
             if (winkel >= 351) return 6;
             if (winkel >= 333) return 10;

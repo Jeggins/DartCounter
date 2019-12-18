@@ -36,7 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button_DoubleOut = new System.Windows.Forms.Button();
+            this.button_Gamemode = new System.Windows.Forms.Button();
             this.label_Player1 = new System.Windows.Forms.Label();
             this.label_Player3 = new System.Windows.Forms.Label();
             this.label_Player2 = new System.Windows.Forms.Label();
@@ -126,16 +126,16 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Spielmodus";
             // 
-            // button_DoubleOut
+            // button_Gamemode
             // 
-            this.button_DoubleOut.Location = new System.Drawing.Point(122, 227);
-            this.button_DoubleOut.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
-            this.button_DoubleOut.Name = "button_DoubleOut";
-            this.button_DoubleOut.Size = new System.Drawing.Size(100, 45);
-            this.button_DoubleOut.TabIndex = 2;
-            this.button_DoubleOut.Text = "Double - Out";
-            this.button_DoubleOut.UseVisualStyleBackColor = true;
-            this.button_DoubleOut.Click += new System.EventHandler(this.button_DoubleOut_Click);
+            this.button_Gamemode.Location = new System.Drawing.Point(122, 227);
+            this.button_Gamemode.Margin = new System.Windows.Forms.Padding(3, 3, 30, 3);
+            this.button_Gamemode.Name = "button_Gamemode";
+            this.button_Gamemode.Size = new System.Drawing.Size(100, 45);
+            this.button_Gamemode.TabIndex = 2;
+            this.button_Gamemode.Text = "Double - Out";
+            this.button_Gamemode.UseVisualStyleBackColor = true;
+            this.button_Gamemode.Click += new System.EventHandler(this.button_Gamemode_Click);
             // 
             // label_Player1
             // 
@@ -287,7 +287,7 @@
             this.Controls.Add(this.label_Player2);
             this.Controls.Add(this.label_Player3);
             this.Controls.Add(this.label_Player1);
-            this.Controls.Add(this.button_DoubleOut);
+            this.Controls.Add(this.button_Gamemode);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -314,7 +314,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button_DoubleOut;
+        private System.Windows.Forms.Button button_Gamemode;
         private System.Windows.Forms.Label label_Player1;
         private System.Windows.Forms.Label label_Player3;
         private System.Windows.Forms.Label label_Player2;

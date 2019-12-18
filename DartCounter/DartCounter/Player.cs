@@ -63,16 +63,16 @@ namespace DartCounter
         /// <param name="points">Punkte des Wurfs</param>
         /// <param name="isDouble">Wurde ein Double-Feld getroffen?</param>
         /// <param name="ring">Welches Feld wurde getroffen</param>
-        public void AddThrow(int points, bool isDouble, int ring)
+        public void AddThrow(int points, int zone, bool isDouble, int ring)
         {
             if (Points == 50 || Points <= 40 && Points % 2 == 0)
             {
-                Throws t = new Throws(points, isDouble, true, ring);
+                Throws t = new Throws(points, zone, isDouble, true, ring);
                 throws.Add(t);
             }
             else
             {
-                Throws t = new Throws(points, isDouble, false, ring);
+                Throws t = new Throws(points, zone, isDouble, false, ring);
                 throws.Add(t);
             }
         }

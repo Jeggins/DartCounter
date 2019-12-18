@@ -41,9 +41,9 @@ namespace DartCounter
         /// <param name="score">Geworfene Punktzahl</param>
         /// <param name="isDouble">Wurde ein Doppelfeld getroffen?</param>
         /// <param name="ring">welches Feld wurde getroffen</param>
-        public void HandleThrow(int score, bool isDouble, int ring)
+        public void HandleThrow(int score, int zone, bool isDouble, int ring)
         {
-            players[ActivePlayer].AddThrow(score, isDouble, ring);
+            players[ActivePlayer].AddThrow(score, zone, isDouble, ring);
             players[ActivePlayer].setPoints();
             players[ActivePlayer].HandleThrows(1);
             players[ActivePlayer].Undo = true;
@@ -55,7 +55,7 @@ namespace DartCounter
                 players[ActivePlayer].SetThrowsToZero(3 - players[ActivePlayer].ThrowsLeft);
                 for (int i = 0; i < 3; i++)
                 {
-                    players[ActivePlayer].AddThrow(0, false, 0);
+                    players[ActivePlayer].AddThrow(0, zone, false, 0);
                 }
                 players[ActivePlayer].HandleThrows(players[ActivePlayer].ThrowsLeft);
             }

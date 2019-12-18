@@ -16,6 +16,7 @@ namespace DartCounter
         int startPoints;
         bool doubleOut;
         Form2 f;
+        Cricket c;
         public Statistic statistics;
 
         /// <summary>
@@ -42,11 +43,11 @@ namespace DartCounter
         private void button_GamesStart_Click(object sender, EventArgs e)
         {
             startPoints = Convert.ToInt32(button_StartPoints.Text);
-            if (button_DoubleOut.Text == "Double - Out")
+            if (button_Gamemode.Text == "Double - Out")
             {
                 doubleOut = true;
             }
-            else
+            else if (button_Gamemode.Text == "Single - Out")
             {
                 doubleOut = false;
             }
@@ -76,8 +77,16 @@ namespace DartCounter
                     }
                     else
                     {
-                        f = new Form2(player, startPoints, doubleOut, comboBox_Player1.Text, comboBox_Player2.Text, this);
-                        f.Show();
+                        if (button_Gamemode.Text != "Cricket")
+                        {
+                            f = new Form2(player, startPoints, doubleOut, comboBox_Player1.Text, comboBox_Player2.Text, this);
+                            f.Show();
+                        }
+                        else
+                        {
+                            c = new Cricket(player, startPoints, comboBox_Player1.Text, comboBox_Player2.Text, this);
+                            c.Show();
+                        }
                         this.Hide();
                     }
                     break;
@@ -94,8 +103,16 @@ namespace DartCounter
                     }
                     else
                     {
-                        f = new Form2(player, startPoints, doubleOut, comboBox_Player1.Text, comboBox_Player2.Text, comboBox_Player3.Text, this);
-                        f.Show();
+                        if (button_Gamemode.Text != "Cricket")
+                        {
+                            f = new Form2(player, startPoints, doubleOut, comboBox_Player1.Text, comboBox_Player2.Text, comboBox_Player3.Text, this);
+                            f.Show();
+                        }
+                        else
+                        {
+                            c = new Cricket(player, startPoints, comboBox_Player1.Text, comboBox_Player2.Text, comboBox_Player3.Text, this);
+                            c.Show();
+                        }
                         this.Hide();
                     }
                     break;
@@ -107,15 +124,23 @@ namespace DartCounter
                     {
                         MessageBox.Show("Bitte alle Spieler auswählen!");
                     }
-                    else if (comboBox_Player1.Text == comboBox_Player2.Text || comboBox_Player1.Text == comboBox_Player3.Text || comboBox_Player1.Text == comboBox_Player4.Text 
+                    else if (comboBox_Player1.Text == comboBox_Player2.Text || comboBox_Player1.Text == comboBox_Player3.Text || comboBox_Player1.Text == comboBox_Player4.Text
                         || comboBox_Player2.Text == comboBox_Player3.Text || comboBox_Player2.Text == comboBox_Player4.Text || comboBox_Player3.Text == comboBox_Player4.Text)
                     {
                         MessageBox.Show("Bitte jeden Spieler nur einmal auswählen");
                     }
                     else
                     {
-                        f = new Form2(player, startPoints, doubleOut, comboBox_Player1.Text, comboBox_Player2.Text, comboBox_Player3.Text, comboBox_Player4.Text, this);
-                        f.Show();
+                        if (button_Gamemode.Text != "Cricket")
+                        {
+                            f = new Form2(player, startPoints, doubleOut, comboBox_Player1.Text, comboBox_Player2.Text, comboBox_Player3.Text, comboBox_Player4.Text, this);
+                            f.Show();
+                        }
+                        else
+                        {
+                            c = new Cricket(player, startPoints, comboBox_Player1.Text, comboBox_Player2.Text, comboBox_Player3.Text, comboBox_Player4.Text, this);
+                            c.Show();
+                        }
                         this.Hide();
                     }
                     break;
@@ -134,12 +159,24 @@ namespace DartCounter
                 case 2: button_Player.Text = "3 Spieler"; label_Player3.Visible = true; comboBox_Player3.Visible = true; button_RotatePlayer.Visible = true; player = 3; break;
                 case 3: button_Player.Text = "4 Spieler"; label_Player4.Visible = true; comboBox_Player4.Visible = true; button_RotatePlayer.Visible = true; player = 4; break;
                 case 4:
-                    button_Player.Text = "1 Spieler";
-                    label_Player2.Visible = false; comboBox_Player2.Visible = false;
-                    label_Player3.Visible = false; comboBox_Player3.Visible = false;
-                    label_Player4.Visible = false; comboBox_Player4.Visible = false;
-                    button_RotatePlayer.Visible = false;
-                    player = 1; break;
+                    if (button_Gamemode.Text == "Cricket")
+                    {
+                        button_Player.Text = "2 Spieler";
+                        label_Player3.Visible = false; comboBox_Player3.Visible = false;
+                        label_Player4.Visible = false; comboBox_Player4.Visible = false;
+                        player = 2;
+                        break;
+                    }
+                    else
+                    {
+                        button_Player.Text = "1 Spieler";
+                        label_Player2.Visible = false; comboBox_Player2.Visible = false;
+                        label_Player3.Visible = false; comboBox_Player3.Visible = false;
+                        label_Player4.Visible = false; comboBox_Player4.Visible = false;
+                        button_RotatePlayer.Visible = false;
+                        player = 1;
+                        break;
+                    }
                 default: MessageBox.Show("Fehler in der Spieleranzahl! Bitte Spiel neustarten"); break;
             }
         }
@@ -164,16 +201,35 @@ namespace DartCounter
         /// <summary>
         /// Ändert den Spielmodus zwischen Double-Out und Single-Out
         /// </summary>
-        private void button_DoubleOut_Click(object sender, EventArgs e)
+        private void button_Gamemode_Click(object sender, EventArgs e)
         {
-            if (doubleOut)
+            if (button_Gamemode.Text == "Double - Out")
             {
-                button_DoubleOut.Text = "Single - Out";
+                button_Gamemode.Text = "Single - Out";
                 doubleOut = false;
+            }
+            else if(button_Gamemode.Text == "Single - Out")
+            {
+                button_Gamemode.Text = "Cricket";
+                startPoints = 0;
+                button_StartPoints.Text = "0";
+                button_StartPoints.Enabled = false;
+                doubleOut = false;
+                if (button_Player.Text == "1 Spieler")
+                {
+                    button_Player.Text = "2 Spieler";
+                    label_Player2.Visible = true;
+                    comboBox_Player2.Visible = true;
+                    button_RotatePlayer.Visible = true;
+                    player = 2;
+                }
             }
             else
             {
-                button_DoubleOut.Text = "Double - Out";
+                button_Gamemode.Text = "Double - Out";
+                startPoints = 501;
+                button_StartPoints.Text = "501";
+                button_StartPoints.Enabled = true;
                 doubleOut = true;
             }
         }
