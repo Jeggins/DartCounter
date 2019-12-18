@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DartCounter
+{
+    public class Throws
+    {
+        public int Points { get; set; }
+        public bool IsDouble { get; set; }
+        public bool PossibleFinishDart { get; set; }
+        public int Ring { get; set; }
+
+        /// <summary>
+        /// Konstruktor der Klasse Throws
+        /// </summary>
+        /// <param name="points">Punktzahl</param>
+        /// <param name="isDouble">Wurde ein Double-Feld getroffen?</param>
+        /// <param name="possibleFinishDart">Konnte mit dem Dart gefinished werden?</param>
+        /// <param name="ring">Welches Feld wurde getroffen?</param>
+        public Throws(int points, bool isDouble, bool possibleFinishDart, int ring)
+        {
+            this.Points = points;
+            this.IsDouble = isDouble;
+            this.PossibleFinishDart = possibleFinishDart;
+            this.Ring = ring;
+        }
+    }
+}
