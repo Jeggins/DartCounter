@@ -19,6 +19,9 @@ namespace DartCounter
         string twoDots = "⚫ ⚫";
         string oneDot = "⚫";
 
+        bool win = false;
+        int winner;
+
         public Cricket(int player, int startPoints, string player1, string player2, Form1 f1)
         {
             InitializeComponent();
@@ -40,10 +43,12 @@ namespace DartCounter
         {
             InitializeComponent();
             panel_Player2.Visible = true;
+            panel_Player3.Visible = true;
             label_Player1Name.Text = player1;
             label_Player2Name.Text = player2;
+            label_Player3Name.Text = player3;
             this.f1 = f1;
-            string[] names = new string[2] { player1, player2 };
+            string[] names = new string[3] { player1, player2, player3 };
             cg = new CricketGame(player, startPoints, names);
             for (int i = 0; i < player; i++)
             {
@@ -57,10 +62,14 @@ namespace DartCounter
         {
             InitializeComponent();
             panel_Player2.Visible = true;
+            panel_Player3.Visible = true;
+            panel_Player4.Visible = true;
             label_Player1Name.Text = player1;
             label_Player2Name.Text = player2;
+            label_Player3Name.Text = player3;
+            label_Player4Name.Text = player4;
             this.f1 = f1;
-            string[] names = new string[2] { player1, player2 };
+            string[] names = new string[4] { player1, player2, player3, player4 };
             cg = new CricketGame(player, startPoints, names);
             for (int i = 0; i < player; i++)
             {
@@ -94,31 +103,33 @@ namespace DartCounter
             int Score = GetScore(angle, posX, posY);
             if (GetRing(posX, posY) == enumRingType.DoubleBull)
             {
-                cg.HandleThrow(Score, 25, true, 5);
+                cg.HandleThrow(Score, 25, 5);
             }
             else if (GetRing(posX, posY) == enumRingType.SingleBull)
             {
-                cg.HandleThrow(Score, 25, false, 4);
+                cg.HandleThrow(Score, 25, 4);
             }
             else if (GetRing(posX, posY) == enumRingType.Triple)
             {
-                cg.HandleThrow(Score, zone, false, 3);
+                cg.HandleThrow(Score, zone, 3);
             }
             else if (GetRing(posX, posY) == enumRingType.Double)
             {
-                cg.HandleThrow(Score, zone, true, 2);
+                cg.HandleThrow(Score, zone, 2);
             }
             else if (GetRing(posX, posY) == enumRingType.Single)
             {
-                cg.HandleThrow(Score, zone, false, 1);
+                cg.HandleThrow(Score, zone, 1);
             }
             else
             {
-                cg.HandleThrow(Score, 0, false, 0);
+                cg.HandleThrow(Score, 0, 0);
             }
-            bool win = cg.players[cg.ActivePlayer].Win();
+
+            win = cg.CheckForWin();
             if (win)
             {
+                winner = cg.players.FindIndex(x => x.Name == cg.Winner);
             }
             UpdateScreen(win);
             if (cg.players[cg.ActivePlayer].ThrowsLeft == 0)
@@ -312,11 +323,119 @@ namespace DartCounter
                         pictureBox_p1d2.Visible = false;
                         pictureBox_p1d3.Visible = false;
                     }
-                    if (win)
+
+                    //Dots for Innings
+                    if (cg.players[0].Fifteen == 3)
                     {
-                        label_Player1Win.Visible = true;
-                        MessageBox.Show(string.Format("{0} hat gewonnen!", cg.players[0].Name));
-                        this.Close();
+                        label_p1_15_dots.Text = threeDots;
+                    }
+                    else if (cg.players[0].Fifteen == 2)
+                    {
+                        label_p1_15_dots.Text = twoDots;
+                    }
+                    else if (cg.players[0].Fifteen == 1)
+                    {
+                        label_p1_15_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p1_15_dots.Text = "";
+                    }
+                    if (cg.players[0].Sixteen == 3)
+                    {
+                        label_p1_16_dots.Text = threeDots;
+                    }
+                    else if (cg.players[0].Sixteen == 2)
+                    {
+                        label_p1_16_dots.Text = twoDots;
+                    }
+                    else if (cg.players[0].Sixteen == 1)
+                    {
+                        label_p1_16_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p1_16_dots.Text = "";
+                    }
+                    if (cg.players[0].Seventeen == 3)
+                    {
+                        label_p1_17_dots.Text = threeDots;
+                    }
+                    else if (cg.players[0].Seventeen == 2)
+                    {
+                        label_p1_17_dots.Text = twoDots;
+                    }
+                    else if (cg.players[0].Seventeen == 1)
+                    {
+                        label_p1_17_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p1_17_dots.Text = "";
+                    }
+                    if (cg.players[0].Eighteen == 3)
+                    {
+                        label_p1_18_dots.Text = threeDots;
+                    }
+                    else if (cg.players[0].Eighteen == 2)
+                    {
+                        label_p1_18_dots.Text = twoDots;
+                    }
+                    else if (cg.players[0].Eighteen == 1)
+                    {
+                        label_p1_18_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p1_18_dots.Text = "";
+                    }
+                    if (cg.players[0].Nineteen == 3)
+                    {
+                        label_p1_19_dots.Text = threeDots;
+                    }
+                    else if (cg.players[0].Nineteen == 2)
+                    {
+                        label_p1_19_dots.Text = twoDots;
+                    }
+                    else if (cg.players[0].Nineteen == 1)
+                    {
+                        label_p1_19_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p1_19_dots.Text = "";
+                    }
+                    if (cg.players[0].Twenty == 3)
+                    {
+                        label_p1_20_dots.Text = threeDots;
+                    }
+                    else if (cg.players[0].Twenty == 2)
+                    {
+                        label_p1_20_dots.Text = twoDots;
+                    }
+                    else if (cg.players[0].Twenty == 1)
+                    {
+                        label_p1_20_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p1_20_dots.Text = "";
+                    }
+                    if (cg.players[0].Bull == 3)
+                    {
+                        label_p1_bull_dots.Text = threeDots;
+                    }
+                    else if (cg.players[0].Bull == 2)
+                    {
+                        label_p1_bull_dots.Text = twoDots;
+                    }
+                    else if (cg.players[0].Bull == 1)
+                    {
+                        label_p1_bull_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p1_bull_dots.Text = "";
                     }
                     break;
                 case 1:
@@ -373,11 +492,118 @@ namespace DartCounter
                         pictureBox_p2d2.Visible = false;
                         pictureBox_p2d3.Visible = false;
                     }
-                    if (win)
+                    //Dots for Innings
+                    if (cg.players[1].Fifteen == 3)
                     {
-                        label_Player2Win.Visible = true;
-                        MessageBox.Show(string.Format("{0} hat gewonnen!", cg.players[1].Name));
-                        this.Close();
+                        label_p2_15_dots.Text = threeDots;
+                    }
+                    else if (cg.players[1].Fifteen == 2)
+                    {
+                        label_p2_15_dots.Text = twoDots;
+                    }
+                    else if (cg.players[1].Fifteen == 1)
+                    {
+                        label_p2_15_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p2_15_dots.Text = "";
+                    }
+                    if (cg.players[1].Sixteen == 3)
+                    {
+                        label_p2_16_dots.Text = threeDots;
+                    }
+                    else if (cg.players[1].Sixteen == 2)
+                    {
+                        label_p2_16_dots.Text = twoDots;
+                    }
+                    else if (cg.players[1].Sixteen == 1)
+                    {
+                        label_p2_16_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p2_16_dots.Text = "";
+                    }
+                    if (cg.players[1].Seventeen == 3)
+                    {
+                        label_p2_17_dots.Text = threeDots;
+                    }
+                    else if (cg.players[1].Seventeen == 2)
+                    {
+                        label_p2_17_dots.Text = twoDots;
+                    }
+                    else if (cg.players[1].Seventeen == 1)
+                    {
+                        label_p2_17_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p2_17_dots.Text = "";
+                    }
+                    if (cg.players[1].Eighteen == 3)
+                    {
+                        label_p2_18_dots.Text = threeDots;
+                    }
+                    else if (cg.players[1].Eighteen == 2)
+                    {
+                        label_p2_18_dots.Text = twoDots;
+                    }
+                    else if (cg.players[1].Eighteen == 1)
+                    {
+                        label_p2_18_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p2_18_dots.Text = "";
+                    }
+                    if (cg.players[1].Nineteen == 3)
+                    {
+                        label_p2_19_dots.Text = threeDots;
+                    }
+                    else if (cg.players[1].Nineteen == 2)
+                    {
+                        label_p2_19_dots.Text = twoDots;
+                    }
+                    else if (cg.players[1].Nineteen == 1)
+                    {
+                        label_p2_19_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p2_19_dots.Text = "";
+                    }
+                    if (cg.players[1].Twenty == 3)
+                    {
+                        label_p2_20_dots.Text = threeDots;
+                    }
+                    else if (cg.players[1].Twenty == 2)
+                    {
+                        label_p2_20_dots.Text = twoDots;
+                    }
+                    else if (cg.players[1].Twenty == 1)
+                    {
+                        label_p2_20_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p2_20_dots.Text = "";
+                    }
+                    if (cg.players[1].Bull == 3)
+                    {
+                        label_p2_bull_dots.Text = threeDots;
+                    }
+                    else if (cg.players[1].Bull == 2)
+                    {
+                        label_p2_bull_dots.Text = twoDots;
+                    }
+                    else if (cg.players[1].Bull == 1)
+                    {
+                        label_p2_bull_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p2_bull_dots.Text = "";
                     }
                     break;
                 case 2:
@@ -434,11 +660,118 @@ namespace DartCounter
                         pictureBox_p3d2.Visible = false;
                         pictureBox_p3d3.Visible = false;
                     }
-                    if (win)
+                    //Dots for Innings
+                    if (cg.players[2].Fifteen == 3)
                     {
-                        label_Player3Win.Visible = true;
-                        MessageBox.Show(string.Format("{0} hat gewonnen!", cg.players[2].Name));
-                        this.Close();
+                        label_p3_15_dots.Text = threeDots;
+                    }
+                    else if (cg.players[2].Fifteen == 2)
+                    {
+                        label_p3_15_dots.Text = twoDots;
+                    }
+                    else if (cg.players[2].Fifteen == 1)
+                    {
+                        label_p3_15_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p3_15_dots.Text = "";
+                    }
+                    if (cg.players[2].Sixteen == 3)
+                    {
+                        label_p3_16_dots.Text = threeDots;
+                    }
+                    else if (cg.players[2].Sixteen == 2)
+                    {
+                        label_p3_16_dots.Text = twoDots;
+                    }
+                    else if (cg.players[2].Sixteen == 1)
+                    {
+                        label_p3_16_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p3_16_dots.Text = "";
+                    }
+                    if (cg.players[2].Seventeen == 3)
+                    {
+                        label_p3_17_dots.Text = threeDots;
+                    }
+                    else if (cg.players[2].Seventeen == 2)
+                    {
+                        label_p3_17_dots.Text = twoDots;
+                    }
+                    else if (cg.players[2].Seventeen == 1)
+                    {
+                        label_p3_17_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p3_17_dots.Text = "";
+                    }
+                    if (cg.players[2].Eighteen == 3)
+                    {
+                        label_p3_18_dots.Text = threeDots;
+                    }
+                    else if (cg.players[2].Eighteen == 2)
+                    {
+                        label_p3_18_dots.Text = twoDots;
+                    }
+                    else if (cg.players[2].Eighteen == 1)
+                    {
+                        label_p3_18_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p3_18_dots.Text = "";
+                    }
+                    if (cg.players[2].Nineteen == 3)
+                    {
+                        label_p3_19_dots.Text = threeDots;
+                    }
+                    else if (cg.players[2].Nineteen == 2)
+                    {
+                        label_p3_19_dots.Text = twoDots;
+                    }
+                    else if (cg.players[2].Nineteen == 1)
+                    {
+                        label_p3_19_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p3_19_dots.Text = "";
+                    }
+                    if (cg.players[2].Twenty == 3)
+                    {
+                        label_p3_20_dots.Text = threeDots;
+                    }
+                    else if (cg.players[2].Twenty == 2)
+                    {
+                        label_p3_20_dots.Text = twoDots;
+                    }
+                    else if (cg.players[2].Twenty == 1)
+                    {
+                        label_p3_20_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p3_20_dots.Text = "";
+                    }
+                    if (cg.players[2].Bull == 3)
+                    {
+                        label_p3_bull_dots.Text = threeDots;
+                    }
+                    else if (cg.players[2].Bull == 2)
+                    {
+                        label_p3_bull_dots.Text = twoDots;
+                    }
+                    else if (cg.players[2].Bull == 1)
+                    {
+                        label_p3_bull_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p3_bull_dots.Text = "";
                     }
                     break;
                 case 3:
@@ -495,13 +828,147 @@ namespace DartCounter
                         pictureBox_p4d2.Visible = false;
                         pictureBox_p4d3.Visible = false;
                     }
-                    if (win)
+                    //Dots for Innings
+                    if (cg.players[3].Fifteen == 3)
                     {
-                        label_Player4Win.Visible = true;
-                        MessageBox.Show(string.Format("{0} hat gewonnen!", cg.players[3].Name));
-                        this.Close();
+                        label_p4_15_dots.Text = threeDots;
+                    }
+                    else if (cg.players[3].Fifteen == 2)
+                    {
+                        label_p4_15_dots.Text = twoDots;
+                    }
+                    else if (cg.players[3].Fifteen == 1)
+                    {
+                        label_p4_15_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p4_15_dots.Text = "";
+                    }
+                    if (cg.players[3].Sixteen == 3)
+                    {
+                        label_p4_16_dots.Text = threeDots;
+                    }
+                    else if (cg.players[3].Sixteen == 2)
+                    {
+                        label_p4_16_dots.Text = twoDots;
+                    }
+                    else if (cg.players[3].Sixteen == 1)
+                    {
+                        label_p4_16_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p4_16_dots.Text = "";
+                    }
+                    if (cg.players[3].Seventeen == 3)
+                    {
+                        label_p4_17_dots.Text = threeDots;
+                    }
+                    else if (cg.players[3].Seventeen == 2)
+                    {
+                        label_p4_17_dots.Text = twoDots;
+                    }
+                    else if (cg.players[3].Seventeen == 1)
+                    {
+                        label_p4_17_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p4_17_dots.Text = "";
+                    }
+                    if (cg.players[3].Eighteen == 3)
+                    {
+                        label_p4_18_dots.Text = threeDots;
+                    }
+                    else if (cg.players[3].Eighteen == 2)
+                    {
+                        label_p4_18_dots.Text = twoDots;
+                    }
+                    else if (cg.players[3].Eighteen == 1)
+                    {
+                        label_p4_18_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p4_18_dots.Text = "";
+                    }
+                    if (cg.players[3].Nineteen == 3)
+                    {
+                        label_p4_19_dots.Text = threeDots;
+                    }
+                    else if (cg.players[3].Nineteen == 2)
+                    {
+                        label_p4_19_dots.Text = twoDots;
+                    }
+                    else if (cg.players[3].Nineteen == 1)
+                    {
+                        label_p4_19_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p4_19_dots.Text = "";
+                    }
+                    if (cg.players[3].Twenty == 3)
+                    {
+                        label_p4_20_dots.Text = threeDots;
+                    }
+                    else if (cg.players[3].Twenty == 2)
+                    {
+                        label_p4_20_dots.Text = twoDots;
+                    }
+                    else if (cg.players[3].Twenty == 1)
+                    {
+                        label_p4_20_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p4_20_dots.Text = "";
+                    }
+                    if (cg.players[3].Bull == 3)
+                    {
+                        label_p4_bull_dots.Text = threeDots;
+                    }
+                    else if (cg.players[3].Bull == 2)
+                    {
+                        label_p4_bull_dots.Text = twoDots;
+                    }
+                    else if (cg.players[3].Bull == 1)
+                    {
+                        label_p4_bull_dots.Text = oneDot;
+                    }
+                    else
+                    {
+                        label_p4_bull_dots.Text = "";
                     }
                     break;
+            }
+            //Winning
+            if (win)
+            {
+                switch (winner)
+                {
+                    case 0:
+                        label_Player1Win.Visible = true;
+                        MessageBox.Show(string.Format("{0} hat gewonnen!", cg.players[winner].Name));
+                        this.Close();
+                        break;
+                    case 1:
+                        label_Player2Win.Visible = true;
+                        MessageBox.Show(string.Format("{0} hat gewonnen!", cg.players[winner].Name));
+                        this.Close();
+                        break;
+                    case 2:
+                        label_Player3Win.Visible = true;
+                        MessageBox.Show(string.Format("{0} hat gewonnen!", cg.players[winner].Name));
+                        this.Close();
+                        break;
+                    case 3:
+                        label_Player4Win.Visible = true;
+                        MessageBox.Show(string.Format("{0} hat gewonnen!", cg.players[winner].Name));
+                        this.Close();
+                        break;
+                }
             }
         }
 
@@ -510,6 +977,10 @@ namespace DartCounter
         /// </summary>
         private void button_Player1Undo_Click(object sender, EventArgs e)
         {
+            cg.players[0].Undo = false;
+            cg.ActivePlayer = 0;
+            cg.Undo();
+            UpdateScreen(false);
         }
 
         /// <summary>
@@ -517,6 +988,10 @@ namespace DartCounter
         /// </summary>
         private void button_Player2Undo_Click(object sender, EventArgs e)
         {
+            cg.players[1].Undo = false;
+            cg.ActivePlayer = 1;
+            cg.Undo();
+            UpdateScreen(false);
         }
 
         /// <summary>
@@ -524,6 +999,10 @@ namespace DartCounter
         /// </summary>
         private void button_Player3Undo_Click(object sender, EventArgs e)
         {
+            cg.players[2].Undo = false;
+            cg.ActivePlayer = 2;
+            cg.Undo();
+            UpdateScreen(false);
         }
 
         /// <summary>
@@ -531,6 +1010,10 @@ namespace DartCounter
         /// </summary>
         private void button_Player4Undo_Click(object sender, EventArgs e)
         {
+            cg.players[3].Undo = false;
+            cg.ActivePlayer = 3;
+            cg.Undo();
+            UpdateScreen(false);
         }
 
         /// <summary>

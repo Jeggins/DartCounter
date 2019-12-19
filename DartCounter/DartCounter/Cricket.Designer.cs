@@ -52,28 +52,6 @@
             this.pictureBox_p1d2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_p1d1 = new System.Windows.Forms.PictureBox();
             this.panel_Player3 = new System.Windows.Forms.Panel();
-            this.label_p2_bull_dots = new System.Windows.Forms.Label();
-            this.label_p2_15_dots = new System.Windows.Forms.Label();
-            this.label_p2_16_dots = new System.Windows.Forms.Label();
-            this.label_p2_17_dots = new System.Windows.Forms.Label();
-            this.label_p2_18_dots = new System.Windows.Forms.Label();
-            this.label_p2_19_dots = new System.Windows.Forms.Label();
-            this.label_p2_20_dots = new System.Windows.Forms.Label();
-            this.label_p2_bull = new System.Windows.Forms.Label();
-            this.label_p2_15 = new System.Windows.Forms.Label();
-            this.label_p2_16 = new System.Windows.Forms.Label();
-            this.label_p2_17 = new System.Windows.Forms.Label();
-            this.label_p2_18 = new System.Windows.Forms.Label();
-            this.label_p2_19 = new System.Windows.Forms.Label();
-            this.label_p2_20 = new System.Windows.Forms.Label();
-            this.button_Player3Undo = new System.Windows.Forms.Button();
-            this.label_Player3Name = new System.Windows.Forms.Label();
-            this.label_Player3Win = new System.Windows.Forms.Label();
-            this.pictureBox_p3d3 = new System.Windows.Forms.PictureBox();
-            this.label_Player3Points = new System.Windows.Forms.Label();
-            this.pictureBox_p3d2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_p3d1 = new System.Windows.Forms.PictureBox();
-            this.panel_Player2 = new System.Windows.Forms.Panel();
             this.label_p3_bull_dots = new System.Windows.Forms.Label();
             this.label_p3_15_dots = new System.Windows.Forms.Label();
             this.label_p3_16_dots = new System.Windows.Forms.Label();
@@ -88,6 +66,28 @@
             this.label_p3_18 = new System.Windows.Forms.Label();
             this.label_p3_19 = new System.Windows.Forms.Label();
             this.label_p3_20 = new System.Windows.Forms.Label();
+            this.button_Player3Undo = new System.Windows.Forms.Button();
+            this.label_Player3Name = new System.Windows.Forms.Label();
+            this.label_Player3Win = new System.Windows.Forms.Label();
+            this.pictureBox_p3d3 = new System.Windows.Forms.PictureBox();
+            this.label_Player3Points = new System.Windows.Forms.Label();
+            this.pictureBox_p3d2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_p3d1 = new System.Windows.Forms.PictureBox();
+            this.panel_Player2 = new System.Windows.Forms.Panel();
+            this.label_p2_bull_dots = new System.Windows.Forms.Label();
+            this.label_p2_15_dots = new System.Windows.Forms.Label();
+            this.label_p2_16_dots = new System.Windows.Forms.Label();
+            this.label_p2_17_dots = new System.Windows.Forms.Label();
+            this.label_p2_18_dots = new System.Windows.Forms.Label();
+            this.label_p2_19_dots = new System.Windows.Forms.Label();
+            this.label_p2_20_dots = new System.Windows.Forms.Label();
+            this.label_p2_bull = new System.Windows.Forms.Label();
+            this.label_p2_15 = new System.Windows.Forms.Label();
+            this.label_p2_16 = new System.Windows.Forms.Label();
+            this.label_p2_17 = new System.Windows.Forms.Label();
+            this.label_p2_18 = new System.Windows.Forms.Label();
+            this.label_p2_19 = new System.Windows.Forms.Label();
+            this.label_p2_20 = new System.Windows.Forms.Label();
             this.button_Player2Undo = new System.Windows.Forms.Button();
             this.label_Player2Name = new System.Windows.Forms.Label();
             this.label_Player2Win = new System.Windows.Forms.Label();
@@ -399,20 +399,20 @@
             // panel_Player3
             // 
             this.panel_Player3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel_Player3.Controls.Add(this.label_p2_bull_dots);
-            this.panel_Player3.Controls.Add(this.label_p2_15_dots);
-            this.panel_Player3.Controls.Add(this.label_p2_16_dots);
-            this.panel_Player3.Controls.Add(this.label_p2_17_dots);
-            this.panel_Player3.Controls.Add(this.label_p2_18_dots);
-            this.panel_Player3.Controls.Add(this.label_p2_19_dots);
-            this.panel_Player3.Controls.Add(this.label_p2_20_dots);
-            this.panel_Player3.Controls.Add(this.label_p2_bull);
-            this.panel_Player3.Controls.Add(this.label_p2_15);
-            this.panel_Player3.Controls.Add(this.label_p2_16);
-            this.panel_Player3.Controls.Add(this.label_p2_17);
-            this.panel_Player3.Controls.Add(this.label_p2_18);
-            this.panel_Player3.Controls.Add(this.label_p2_19);
-            this.panel_Player3.Controls.Add(this.label_p2_20);
+            this.panel_Player3.Controls.Add(this.label_p3_bull_dots);
+            this.panel_Player3.Controls.Add(this.label_p3_15_dots);
+            this.panel_Player3.Controls.Add(this.label_p3_16_dots);
+            this.panel_Player3.Controls.Add(this.label_p3_17_dots);
+            this.panel_Player3.Controls.Add(this.label_p3_18_dots);
+            this.panel_Player3.Controls.Add(this.label_p3_19_dots);
+            this.panel_Player3.Controls.Add(this.label_p3_20_dots);
+            this.panel_Player3.Controls.Add(this.label_p3_bull);
+            this.panel_Player3.Controls.Add(this.label_p3_15);
+            this.panel_Player3.Controls.Add(this.label_p3_16);
+            this.panel_Player3.Controls.Add(this.label_p3_17);
+            this.panel_Player3.Controls.Add(this.label_p3_18);
+            this.panel_Player3.Controls.Add(this.label_p3_19);
+            this.panel_Player3.Controls.Add(this.label_p3_20);
             this.panel_Player3.Controls.Add(this.button_Player3Undo);
             this.panel_Player3.Controls.Add(this.label_Player3Name);
             this.panel_Player3.Controls.Add(this.label_Player3Win);
@@ -427,152 +427,152 @@
             this.panel_Player3.TabIndex = 13;
             this.panel_Player3.Visible = false;
             // 
-            // label_p2_bull_dots
+            // label_p3_bull_dots
             // 
-            this.label_p2_bull_dots.AutoSize = true;
-            this.label_p2_bull_dots.Location = new System.Drawing.Point(105, 241);
-            this.label_p2_bull_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p2_bull_dots.Name = "label_p2_bull_dots";
-            this.label_p2_bull_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p2_bull_dots.TabIndex = 42;
-            this.label_p2_bull_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p3_bull_dots.AutoSize = true;
+            this.label_p3_bull_dots.Location = new System.Drawing.Point(105, 241);
+            this.label_p3_bull_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p3_bull_dots.Name = "label_p3_bull_dots";
+            this.label_p3_bull_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p3_bull_dots.TabIndex = 42;
+            this.label_p3_bull_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p2_15_dots
+            // label_p3_15_dots
             // 
-            this.label_p2_15_dots.AutoSize = true;
-            this.label_p2_15_dots.Location = new System.Drawing.Point(105, 222);
-            this.label_p2_15_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p2_15_dots.Name = "label_p2_15_dots";
-            this.label_p2_15_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p2_15_dots.TabIndex = 41;
-            this.label_p2_15_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p3_15_dots.AutoSize = true;
+            this.label_p3_15_dots.Location = new System.Drawing.Point(105, 222);
+            this.label_p3_15_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p3_15_dots.Name = "label_p3_15_dots";
+            this.label_p3_15_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p3_15_dots.TabIndex = 41;
+            this.label_p3_15_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p2_16_dots
+            // label_p3_16_dots
             // 
-            this.label_p2_16_dots.AutoSize = true;
-            this.label_p2_16_dots.Location = new System.Drawing.Point(105, 203);
-            this.label_p2_16_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p2_16_dots.Name = "label_p2_16_dots";
-            this.label_p2_16_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p2_16_dots.TabIndex = 40;
-            this.label_p2_16_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p3_16_dots.AutoSize = true;
+            this.label_p3_16_dots.Location = new System.Drawing.Point(105, 203);
+            this.label_p3_16_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p3_16_dots.Name = "label_p3_16_dots";
+            this.label_p3_16_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p3_16_dots.TabIndex = 40;
+            this.label_p3_16_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p2_17_dots
+            // label_p3_17_dots
             // 
-            this.label_p2_17_dots.AutoSize = true;
-            this.label_p2_17_dots.Location = new System.Drawing.Point(105, 184);
-            this.label_p2_17_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p2_17_dots.Name = "label_p2_17_dots";
-            this.label_p2_17_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p2_17_dots.TabIndex = 39;
-            this.label_p2_17_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p3_17_dots.AutoSize = true;
+            this.label_p3_17_dots.Location = new System.Drawing.Point(105, 184);
+            this.label_p3_17_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p3_17_dots.Name = "label_p3_17_dots";
+            this.label_p3_17_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p3_17_dots.TabIndex = 39;
+            this.label_p3_17_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p2_18_dots
+            // label_p3_18_dots
             // 
-            this.label_p2_18_dots.AutoSize = true;
-            this.label_p2_18_dots.Location = new System.Drawing.Point(105, 165);
-            this.label_p2_18_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p2_18_dots.Name = "label_p2_18_dots";
-            this.label_p2_18_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p2_18_dots.TabIndex = 38;
-            this.label_p2_18_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p3_18_dots.AutoSize = true;
+            this.label_p3_18_dots.Location = new System.Drawing.Point(105, 165);
+            this.label_p3_18_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p3_18_dots.Name = "label_p3_18_dots";
+            this.label_p3_18_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p3_18_dots.TabIndex = 38;
+            this.label_p3_18_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p2_19_dots
+            // label_p3_19_dots
             // 
-            this.label_p2_19_dots.AutoSize = true;
-            this.label_p2_19_dots.Location = new System.Drawing.Point(105, 146);
-            this.label_p2_19_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p2_19_dots.Name = "label_p2_19_dots";
-            this.label_p2_19_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p2_19_dots.TabIndex = 37;
-            this.label_p2_19_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p3_19_dots.AutoSize = true;
+            this.label_p3_19_dots.Location = new System.Drawing.Point(105, 146);
+            this.label_p3_19_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p3_19_dots.Name = "label_p3_19_dots";
+            this.label_p3_19_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p3_19_dots.TabIndex = 37;
+            this.label_p3_19_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p2_20_dots
+            // label_p3_20_dots
             // 
-            this.label_p2_20_dots.AutoSize = true;
-            this.label_p2_20_dots.Location = new System.Drawing.Point(105, 127);
-            this.label_p2_20_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p2_20_dots.Name = "label_p2_20_dots";
-            this.label_p2_20_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p2_20_dots.TabIndex = 36;
-            this.label_p2_20_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p3_20_dots.AutoSize = true;
+            this.label_p3_20_dots.Location = new System.Drawing.Point(105, 127);
+            this.label_p3_20_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p3_20_dots.Name = "label_p3_20_dots";
+            this.label_p3_20_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p3_20_dots.TabIndex = 36;
+            this.label_p3_20_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p2_bull
+            // label_p3_bull
             // 
-            this.label_p2_bull.AutoSize = true;
-            this.label_p2_bull.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p2_bull.Location = new System.Drawing.Point(37, 241);
-            this.label_p2_bull.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p2_bull.Name = "label_p2_bull";
-            this.label_p2_bull.Size = new System.Drawing.Size(28, 13);
-            this.label_p2_bull.TabIndex = 35;
-            this.label_p2_bull.Text = "Bull";
+            this.label_p3_bull.AutoSize = true;
+            this.label_p3_bull.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p3_bull.Location = new System.Drawing.Point(37, 241);
+            this.label_p3_bull.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p3_bull.Name = "label_p3_bull";
+            this.label_p3_bull.Size = new System.Drawing.Size(28, 13);
+            this.label_p3_bull.TabIndex = 35;
+            this.label_p3_bull.Text = "Bull";
             // 
-            // label_p2_15
+            // label_p3_15
             // 
-            this.label_p2_15.AutoSize = true;
-            this.label_p2_15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p2_15.Location = new System.Drawing.Point(44, 222);
-            this.label_p2_15.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p2_15.Name = "label_p2_15";
-            this.label_p2_15.Size = new System.Drawing.Size(21, 13);
-            this.label_p2_15.TabIndex = 34;
-            this.label_p2_15.Text = "15";
+            this.label_p3_15.AutoSize = true;
+            this.label_p3_15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p3_15.Location = new System.Drawing.Point(44, 222);
+            this.label_p3_15.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p3_15.Name = "label_p3_15";
+            this.label_p3_15.Size = new System.Drawing.Size(21, 13);
+            this.label_p3_15.TabIndex = 34;
+            this.label_p3_15.Text = "15";
             // 
-            // label_p2_16
+            // label_p3_16
             // 
-            this.label_p2_16.AutoSize = true;
-            this.label_p2_16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p2_16.Location = new System.Drawing.Point(44, 203);
-            this.label_p2_16.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p2_16.Name = "label_p2_16";
-            this.label_p2_16.Size = new System.Drawing.Size(21, 13);
-            this.label_p2_16.TabIndex = 33;
-            this.label_p2_16.Text = "16";
+            this.label_p3_16.AutoSize = true;
+            this.label_p3_16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p3_16.Location = new System.Drawing.Point(44, 203);
+            this.label_p3_16.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p3_16.Name = "label_p3_16";
+            this.label_p3_16.Size = new System.Drawing.Size(21, 13);
+            this.label_p3_16.TabIndex = 33;
+            this.label_p3_16.Text = "16";
             // 
-            // label_p2_17
+            // label_p3_17
             // 
-            this.label_p2_17.AutoSize = true;
-            this.label_p2_17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p2_17.Location = new System.Drawing.Point(44, 184);
-            this.label_p2_17.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p2_17.Name = "label_p2_17";
-            this.label_p2_17.Size = new System.Drawing.Size(21, 13);
-            this.label_p2_17.TabIndex = 32;
-            this.label_p2_17.Text = "17";
+            this.label_p3_17.AutoSize = true;
+            this.label_p3_17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p3_17.Location = new System.Drawing.Point(44, 184);
+            this.label_p3_17.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p3_17.Name = "label_p3_17";
+            this.label_p3_17.Size = new System.Drawing.Size(21, 13);
+            this.label_p3_17.TabIndex = 32;
+            this.label_p3_17.Text = "17";
             // 
-            // label_p2_18
+            // label_p3_18
             // 
-            this.label_p2_18.AutoSize = true;
-            this.label_p2_18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p2_18.Location = new System.Drawing.Point(44, 165);
-            this.label_p2_18.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p2_18.Name = "label_p2_18";
-            this.label_p2_18.Size = new System.Drawing.Size(21, 13);
-            this.label_p2_18.TabIndex = 31;
-            this.label_p2_18.Text = "18";
+            this.label_p3_18.AutoSize = true;
+            this.label_p3_18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p3_18.Location = new System.Drawing.Point(44, 165);
+            this.label_p3_18.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p3_18.Name = "label_p3_18";
+            this.label_p3_18.Size = new System.Drawing.Size(21, 13);
+            this.label_p3_18.TabIndex = 31;
+            this.label_p3_18.Text = "18";
             // 
-            // label_p2_19
+            // label_p3_19
             // 
-            this.label_p2_19.AutoSize = true;
-            this.label_p2_19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p2_19.Location = new System.Drawing.Point(44, 146);
-            this.label_p2_19.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p2_19.Name = "label_p2_19";
-            this.label_p2_19.Size = new System.Drawing.Size(21, 13);
-            this.label_p2_19.TabIndex = 30;
-            this.label_p2_19.Text = "19";
+            this.label_p3_19.AutoSize = true;
+            this.label_p3_19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p3_19.Location = new System.Drawing.Point(44, 146);
+            this.label_p3_19.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p3_19.Name = "label_p3_19";
+            this.label_p3_19.Size = new System.Drawing.Size(21, 13);
+            this.label_p3_19.TabIndex = 30;
+            this.label_p3_19.Text = "19";
             // 
-            // label_p2_20
+            // label_p3_20
             // 
-            this.label_p2_20.AutoSize = true;
-            this.label_p2_20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p2_20.Location = new System.Drawing.Point(44, 127);
-            this.label_p2_20.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p2_20.Name = "label_p2_20";
-            this.label_p2_20.Size = new System.Drawing.Size(21, 13);
-            this.label_p2_20.TabIndex = 29;
-            this.label_p2_20.Text = "20";
+            this.label_p3_20.AutoSize = true;
+            this.label_p3_20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p3_20.Location = new System.Drawing.Point(44, 127);
+            this.label_p3_20.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p3_20.Name = "label_p3_20";
+            this.label_p3_20.Size = new System.Drawing.Size(21, 13);
+            this.label_p3_20.TabIndex = 29;
+            this.label_p3_20.Text = "20";
             // 
             // button_Player3Undo
             // 
@@ -662,20 +662,20 @@
             // panel_Player2
             // 
             this.panel_Player2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel_Player2.Controls.Add(this.label_p3_bull_dots);
-            this.panel_Player2.Controls.Add(this.label_p3_15_dots);
-            this.panel_Player2.Controls.Add(this.label_p3_16_dots);
-            this.panel_Player2.Controls.Add(this.label_p3_17_dots);
-            this.panel_Player2.Controls.Add(this.label_p3_18_dots);
-            this.panel_Player2.Controls.Add(this.label_p3_19_dots);
-            this.panel_Player2.Controls.Add(this.label_p3_20_dots);
-            this.panel_Player2.Controls.Add(this.label_p3_bull);
-            this.panel_Player2.Controls.Add(this.label_p3_15);
-            this.panel_Player2.Controls.Add(this.label_p3_16);
-            this.panel_Player2.Controls.Add(this.label_p3_17);
-            this.panel_Player2.Controls.Add(this.label_p3_18);
-            this.panel_Player2.Controls.Add(this.label_p3_19);
-            this.panel_Player2.Controls.Add(this.label_p3_20);
+            this.panel_Player2.Controls.Add(this.label_p2_bull_dots);
+            this.panel_Player2.Controls.Add(this.label_p2_15_dots);
+            this.panel_Player2.Controls.Add(this.label_p2_16_dots);
+            this.panel_Player2.Controls.Add(this.label_p2_17_dots);
+            this.panel_Player2.Controls.Add(this.label_p2_18_dots);
+            this.panel_Player2.Controls.Add(this.label_p2_19_dots);
+            this.panel_Player2.Controls.Add(this.label_p2_20_dots);
+            this.panel_Player2.Controls.Add(this.label_p2_bull);
+            this.panel_Player2.Controls.Add(this.label_p2_15);
+            this.panel_Player2.Controls.Add(this.label_p2_16);
+            this.panel_Player2.Controls.Add(this.label_p2_17);
+            this.panel_Player2.Controls.Add(this.label_p2_18);
+            this.panel_Player2.Controls.Add(this.label_p2_19);
+            this.panel_Player2.Controls.Add(this.label_p2_20);
             this.panel_Player2.Controls.Add(this.button_Player2Undo);
             this.panel_Player2.Controls.Add(this.label_Player2Name);
             this.panel_Player2.Controls.Add(this.label_Player2Win);
@@ -690,152 +690,152 @@
             this.panel_Player2.TabIndex = 13;
             this.panel_Player2.Visible = false;
             // 
-            // label_p3_bull_dots
+            // label_p2_bull_dots
             // 
-            this.label_p3_bull_dots.AutoSize = true;
-            this.label_p3_bull_dots.Location = new System.Drawing.Point(104, 241);
-            this.label_p3_bull_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p3_bull_dots.Name = "label_p3_bull_dots";
-            this.label_p3_bull_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p3_bull_dots.TabIndex = 56;
-            this.label_p3_bull_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p2_bull_dots.AutoSize = true;
+            this.label_p2_bull_dots.Location = new System.Drawing.Point(104, 241);
+            this.label_p2_bull_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p2_bull_dots.Name = "label_p2_bull_dots";
+            this.label_p2_bull_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p2_bull_dots.TabIndex = 56;
+            this.label_p2_bull_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p3_15_dots
+            // label_p2_15_dots
             // 
-            this.label_p3_15_dots.AutoSize = true;
-            this.label_p3_15_dots.Location = new System.Drawing.Point(104, 222);
-            this.label_p3_15_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p3_15_dots.Name = "label_p3_15_dots";
-            this.label_p3_15_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p3_15_dots.TabIndex = 55;
-            this.label_p3_15_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p2_15_dots.AutoSize = true;
+            this.label_p2_15_dots.Location = new System.Drawing.Point(104, 222);
+            this.label_p2_15_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p2_15_dots.Name = "label_p2_15_dots";
+            this.label_p2_15_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p2_15_dots.TabIndex = 55;
+            this.label_p2_15_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p3_16_dots
+            // label_p2_16_dots
             // 
-            this.label_p3_16_dots.AutoSize = true;
-            this.label_p3_16_dots.Location = new System.Drawing.Point(104, 203);
-            this.label_p3_16_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p3_16_dots.Name = "label_p3_16_dots";
-            this.label_p3_16_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p3_16_dots.TabIndex = 54;
-            this.label_p3_16_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p2_16_dots.AutoSize = true;
+            this.label_p2_16_dots.Location = new System.Drawing.Point(104, 203);
+            this.label_p2_16_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p2_16_dots.Name = "label_p2_16_dots";
+            this.label_p2_16_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p2_16_dots.TabIndex = 54;
+            this.label_p2_16_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p3_17_dots
+            // label_p2_17_dots
             // 
-            this.label_p3_17_dots.AutoSize = true;
-            this.label_p3_17_dots.Location = new System.Drawing.Point(104, 184);
-            this.label_p3_17_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p3_17_dots.Name = "label_p3_17_dots";
-            this.label_p3_17_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p3_17_dots.TabIndex = 53;
-            this.label_p3_17_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p2_17_dots.AutoSize = true;
+            this.label_p2_17_dots.Location = new System.Drawing.Point(104, 184);
+            this.label_p2_17_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p2_17_dots.Name = "label_p2_17_dots";
+            this.label_p2_17_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p2_17_dots.TabIndex = 53;
+            this.label_p2_17_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p3_18_dots
+            // label_p2_18_dots
             // 
-            this.label_p3_18_dots.AutoSize = true;
-            this.label_p3_18_dots.Location = new System.Drawing.Point(104, 165);
-            this.label_p3_18_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p3_18_dots.Name = "label_p3_18_dots";
-            this.label_p3_18_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p3_18_dots.TabIndex = 52;
-            this.label_p3_18_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p2_18_dots.AutoSize = true;
+            this.label_p2_18_dots.Location = new System.Drawing.Point(104, 165);
+            this.label_p2_18_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p2_18_dots.Name = "label_p2_18_dots";
+            this.label_p2_18_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p2_18_dots.TabIndex = 52;
+            this.label_p2_18_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p3_19_dots
+            // label_p2_19_dots
             // 
-            this.label_p3_19_dots.AutoSize = true;
-            this.label_p3_19_dots.Location = new System.Drawing.Point(104, 146);
-            this.label_p3_19_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p3_19_dots.Name = "label_p3_19_dots";
-            this.label_p3_19_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p3_19_dots.TabIndex = 51;
-            this.label_p3_19_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p2_19_dots.AutoSize = true;
+            this.label_p2_19_dots.Location = new System.Drawing.Point(104, 146);
+            this.label_p2_19_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p2_19_dots.Name = "label_p2_19_dots";
+            this.label_p2_19_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p2_19_dots.TabIndex = 51;
+            this.label_p2_19_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p3_20_dots
+            // label_p2_20_dots
             // 
-            this.label_p3_20_dots.AutoSize = true;
-            this.label_p3_20_dots.Location = new System.Drawing.Point(104, 127);
-            this.label_p3_20_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
-            this.label_p3_20_dots.Name = "label_p3_20_dots";
-            this.label_p3_20_dots.Size = new System.Drawing.Size(49, 13);
-            this.label_p3_20_dots.TabIndex = 50;
-            this.label_p3_20_dots.Text = "⚫ ⚫ ⚫";
+            this.label_p2_20_dots.AutoSize = true;
+            this.label_p2_20_dots.Location = new System.Drawing.Point(104, 127);
+            this.label_p2_20_dots.Margin = new System.Windows.Forms.Padding(20, 6, 3, 0);
+            this.label_p2_20_dots.Name = "label_p2_20_dots";
+            this.label_p2_20_dots.Size = new System.Drawing.Size(49, 13);
+            this.label_p2_20_dots.TabIndex = 50;
+            this.label_p2_20_dots.Text = "⚫ ⚫ ⚫";
             // 
-            // label_p3_bull
+            // label_p2_bull
             // 
-            this.label_p3_bull.AutoSize = true;
-            this.label_p3_bull.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p3_bull.Location = new System.Drawing.Point(36, 241);
-            this.label_p3_bull.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p3_bull.Name = "label_p3_bull";
-            this.label_p3_bull.Size = new System.Drawing.Size(28, 13);
-            this.label_p3_bull.TabIndex = 49;
-            this.label_p3_bull.Text = "Bull";
+            this.label_p2_bull.AutoSize = true;
+            this.label_p2_bull.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p2_bull.Location = new System.Drawing.Point(36, 241);
+            this.label_p2_bull.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p2_bull.Name = "label_p2_bull";
+            this.label_p2_bull.Size = new System.Drawing.Size(28, 13);
+            this.label_p2_bull.TabIndex = 49;
+            this.label_p2_bull.Text = "Bull";
             // 
-            // label_p3_15
+            // label_p2_15
             // 
-            this.label_p3_15.AutoSize = true;
-            this.label_p3_15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p3_15.Location = new System.Drawing.Point(43, 222);
-            this.label_p3_15.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p3_15.Name = "label_p3_15";
-            this.label_p3_15.Size = new System.Drawing.Size(21, 13);
-            this.label_p3_15.TabIndex = 48;
-            this.label_p3_15.Text = "15";
+            this.label_p2_15.AutoSize = true;
+            this.label_p2_15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p2_15.Location = new System.Drawing.Point(43, 222);
+            this.label_p2_15.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p2_15.Name = "label_p2_15";
+            this.label_p2_15.Size = new System.Drawing.Size(21, 13);
+            this.label_p2_15.TabIndex = 48;
+            this.label_p2_15.Text = "15";
             // 
-            // label_p3_16
+            // label_p2_16
             // 
-            this.label_p3_16.AutoSize = true;
-            this.label_p3_16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p3_16.Location = new System.Drawing.Point(43, 203);
-            this.label_p3_16.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p3_16.Name = "label_p3_16";
-            this.label_p3_16.Size = new System.Drawing.Size(21, 13);
-            this.label_p3_16.TabIndex = 47;
-            this.label_p3_16.Text = "16";
+            this.label_p2_16.AutoSize = true;
+            this.label_p2_16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p2_16.Location = new System.Drawing.Point(43, 203);
+            this.label_p2_16.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p2_16.Name = "label_p2_16";
+            this.label_p2_16.Size = new System.Drawing.Size(21, 13);
+            this.label_p2_16.TabIndex = 47;
+            this.label_p2_16.Text = "16";
             // 
-            // label_p3_17
+            // label_p2_17
             // 
-            this.label_p3_17.AutoSize = true;
-            this.label_p3_17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p3_17.Location = new System.Drawing.Point(43, 184);
-            this.label_p3_17.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p3_17.Name = "label_p3_17";
-            this.label_p3_17.Size = new System.Drawing.Size(21, 13);
-            this.label_p3_17.TabIndex = 46;
-            this.label_p3_17.Text = "17";
+            this.label_p2_17.AutoSize = true;
+            this.label_p2_17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p2_17.Location = new System.Drawing.Point(43, 184);
+            this.label_p2_17.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p2_17.Name = "label_p2_17";
+            this.label_p2_17.Size = new System.Drawing.Size(21, 13);
+            this.label_p2_17.TabIndex = 46;
+            this.label_p2_17.Text = "17";
             // 
-            // label_p3_18
+            // label_p2_18
             // 
-            this.label_p3_18.AutoSize = true;
-            this.label_p3_18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p3_18.Location = new System.Drawing.Point(43, 165);
-            this.label_p3_18.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p3_18.Name = "label_p3_18";
-            this.label_p3_18.Size = new System.Drawing.Size(21, 13);
-            this.label_p3_18.TabIndex = 45;
-            this.label_p3_18.Text = "18";
+            this.label_p2_18.AutoSize = true;
+            this.label_p2_18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p2_18.Location = new System.Drawing.Point(43, 165);
+            this.label_p2_18.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p2_18.Name = "label_p2_18";
+            this.label_p2_18.Size = new System.Drawing.Size(21, 13);
+            this.label_p2_18.TabIndex = 45;
+            this.label_p2_18.Text = "18";
             // 
-            // label_p3_19
+            // label_p2_19
             // 
-            this.label_p3_19.AutoSize = true;
-            this.label_p3_19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p3_19.Location = new System.Drawing.Point(43, 146);
-            this.label_p3_19.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p3_19.Name = "label_p3_19";
-            this.label_p3_19.Size = new System.Drawing.Size(21, 13);
-            this.label_p3_19.TabIndex = 44;
-            this.label_p3_19.Text = "19";
+            this.label_p2_19.AutoSize = true;
+            this.label_p2_19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p2_19.Location = new System.Drawing.Point(43, 146);
+            this.label_p2_19.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p2_19.Name = "label_p2_19";
+            this.label_p2_19.Size = new System.Drawing.Size(21, 13);
+            this.label_p2_19.TabIndex = 44;
+            this.label_p2_19.Text = "19";
             // 
-            // label_p3_20
+            // label_p2_20
             // 
-            this.label_p3_20.AutoSize = true;
-            this.label_p3_20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_p3_20.Location = new System.Drawing.Point(43, 127);
-            this.label_p3_20.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
-            this.label_p3_20.Name = "label_p3_20";
-            this.label_p3_20.Size = new System.Drawing.Size(21, 13);
-            this.label_p3_20.TabIndex = 43;
-            this.label_p3_20.Text = "20";
+            this.label_p2_20.AutoSize = true;
+            this.label_p2_20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_p2_20.Location = new System.Drawing.Point(43, 127);
+            this.label_p2_20.Margin = new System.Windows.Forms.Padding(30, 6, 20, 0);
+            this.label_p2_20.Name = "label_p2_20";
+            this.label_p2_20.Size = new System.Drawing.Size(21, 13);
+            this.label_p2_20.TabIndex = 43;
+            this.label_p2_20.Text = "20";
             // 
             // button_Player2Undo
             // 
@@ -1290,20 +1290,6 @@
         private System.Windows.Forms.Label label_p1_19;
         private System.Windows.Forms.Label label_p1_20;
         private System.Windows.Forms.Label label_Player4Win;
-        private System.Windows.Forms.Label label_p2_bull_dots;
-        private System.Windows.Forms.Label label_p2_15_dots;
-        private System.Windows.Forms.Label label_p2_16_dots;
-        private System.Windows.Forms.Label label_p2_17_dots;
-        private System.Windows.Forms.Label label_p2_18_dots;
-        private System.Windows.Forms.Label label_p2_19_dots;
-        private System.Windows.Forms.Label label_p2_20_dots;
-        private System.Windows.Forms.Label label_p2_bull;
-        private System.Windows.Forms.Label label_p2_15;
-        private System.Windows.Forms.Label label_p2_16;
-        private System.Windows.Forms.Label label_p2_17;
-        private System.Windows.Forms.Label label_p2_18;
-        private System.Windows.Forms.Label label_p2_19;
-        private System.Windows.Forms.Label label_p2_20;
         private System.Windows.Forms.Label label_p3_bull_dots;
         private System.Windows.Forms.Label label_p3_15_dots;
         private System.Windows.Forms.Label label_p3_16_dots;
@@ -1318,6 +1304,20 @@
         private System.Windows.Forms.Label label_p3_18;
         private System.Windows.Forms.Label label_p3_19;
         private System.Windows.Forms.Label label_p3_20;
+        private System.Windows.Forms.Label label_p2_bull_dots;
+        private System.Windows.Forms.Label label_p2_15_dots;
+        private System.Windows.Forms.Label label_p2_16_dots;
+        private System.Windows.Forms.Label label_p2_17_dots;
+        private System.Windows.Forms.Label label_p2_18_dots;
+        private System.Windows.Forms.Label label_p2_19_dots;
+        private System.Windows.Forms.Label label_p2_20_dots;
+        private System.Windows.Forms.Label label_p2_bull;
+        private System.Windows.Forms.Label label_p2_15;
+        private System.Windows.Forms.Label label_p2_16;
+        private System.Windows.Forms.Label label_p2_17;
+        private System.Windows.Forms.Label label_p2_18;
+        private System.Windows.Forms.Label label_p2_19;
+        private System.Windows.Forms.Label label_p2_20;
         private System.Windows.Forms.Label label_p4_bull_dots;
         private System.Windows.Forms.Label label_p4_15_dots;
         private System.Windows.Forms.Label label_p4_16_dots;

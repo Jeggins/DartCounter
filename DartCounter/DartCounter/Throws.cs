@@ -12,7 +12,7 @@ namespace DartCounter
         public int Zone { get; set; }
         public bool IsDouble { get; set; }
         public bool PossibleFinishDart { get; set; }
-        public bool WasInning { get; set; }
+        public int Inning { get; set; }
         public int Ring { get; set; }
 
         /// <summary>
@@ -38,11 +38,11 @@ namespace DartCounter
         /// <param name="isDouble">Wurde ein Double-Feld getroffen?</param>
         /// <param name="possibleFinishDart">Konnte mit dem Dart gefinished werden?</param>
         /// <param name="ring">Welches Feld wurde getroffen?</param>
-        public Throws(int points, int zone, bool wasInning, int ring)
+        public Throws(int points, int zone, int inning, int ring)
         {
             this.Points = points;
             this.Zone = zone;
-            this.WasInning = wasInning;
+            this.Inning = inning;
             this.Ring = ring;
         }
     }
