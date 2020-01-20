@@ -178,10 +178,14 @@ namespace DartCounter
             }
             if (players[ActivePlayer].ThrowsLeft >= 2 && !DoubleOut)
             {
-                if (players[ActivePlayer].Points == 110) return "T20, DB";
-                if (players[ActivePlayer].Points == 107) return "T19, DB";
-                if (players[ActivePlayer].Points == 104) return "T18, DB";
-                if (players[ActivePlayer].Points == 101) return "T17, DB";
+                if (players[ActivePlayer].Points == 120) return "T20, T20";
+                if (players[ActivePlayer].Points == 117) return "T20, T19";
+                if (players[ActivePlayer].Points == 114) return "T20, T18";
+                if (players[ActivePlayer].Points == 111) return "T20, T17";
+                if (players[ActivePlayer].Points == 110) return "DB, T20";
+                if (players[ActivePlayer].Points == 107) return "DB, T19";
+                if (players[ActivePlayer].Points == 104) return "DB, T18";
+                if (players[ActivePlayer].Points == 101) return "DB, T17";
                 if (players[ActivePlayer].Points == 100) return "T20, D20";
                 if (players[ActivePlayer].Points == 98) return "T20, D19";
                 if (players[ActivePlayer].Points == 97) return "T19, D20";
@@ -341,16 +345,20 @@ namespace DartCounter
                 if (players[ActivePlayer].Points == 45) return "T15";
                 if (players[ActivePlayer].Points == 42) return "T14";
                 if (players[ActivePlayer].Points == 40) return "D20";
+                if (players[ActivePlayer].Points == 39) return "T13";
                 if (players[ActivePlayer].Points == 38) return "D19";
                 if (players[ActivePlayer].Points == 36) return "D18";
                 if (players[ActivePlayer].Points == 34) return "D17";
+                if (players[ActivePlayer].Points == 33) return "T11";
                 if (players[ActivePlayer].Points == 32) return "D16";
                 if (players[ActivePlayer].Points == 30) return "D15";
                 if (players[ActivePlayer].Points == 28) return "D14";
+                if (players[ActivePlayer].Points == 27) return "T9";
                 if (players[ActivePlayer].Points == 26) return "D13";
                 if (players[ActivePlayer].Points == 25) return "SB";
                 if (players[ActivePlayer].Points == 24) return "D12";
                 if (players[ActivePlayer].Points == 22) return "D11";
+                if (players[ActivePlayer].Points == 21) return "T7";
                 if (players[ActivePlayer].Points == 20) return "20";
                 if (players[ActivePlayer].Points == 19) return "19";
                 if (players[ActivePlayer].Points == 18) return "18";
